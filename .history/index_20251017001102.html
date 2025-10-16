@@ -1,0 +1,365 @@
+<!DOCTYPE html> S
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The ChitraHarsha Samāgama: India's premier online marketplace for new goods, rare antiques, and professional talent. Discover, buy, sell, and connect with our secure, AI-powered platform."
+    />
+    <meta
+      name="keywords"
+      content="e-commerce india, ChitraHarsha Samāgama, job registration, UPI payments, cryptocurrency marketplace, live currency conversion"
+    />
+    <title>The ChitraHarsha Samāgama - The Ultimate Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f0f2f5;
+      }
+      .header-bg {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      .btn-primary {
+        background-color: #6d28d9;
+        color: white;
+        transition: background-color 0.3s ease;
+      }
+      .btn-primary:hover {
+        background-color: #5b21b6;
+      }
+      .section-title {
+        font-size: 2.25rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        animation-name: fadeIn;
+        animation-duration: 0.4s;
+      }
+      .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 2rem;
+        border-radius: 10px;
+        width: 80%;
+        max-width: 650px;
+        animation-name: slideIn;
+        animation-duration: 0.4s;
+      }
+      .close-button {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: block;
+      }
+      @keyframes slideIn {
+        from {
+          top: -300px;
+          opacity: 0;
+        }
+        to {
+          top: 0;
+          opacity: 1;
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header-bg text-white shadow-md sticky top-0 z-50">
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#home" class="text-3xl font-bold logo">
+          <i class="fas fa-gem mr-2"></i>The ChitraHarsha Samāgama
+        </a>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#home" class="hover:text-gray-300">Home</a>
+          <a href="#about" class="hover:text-gray-300">About</a>
+          <a href="#services" class="hover:text-gray-300">Services</a>
+          <a href="#blog" class="hover:text-gray-300">Blog</a>
+          <a href="#contact" class="hover:text-gray-300">Contact</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="#" class="hover:text-gray-300"
+            ><i class="fas fa-shopping-cart"></i
+          ></a>
+          <button
+            id="loginBtn"
+            class="bg-white text-purple-700 px-4 py-2 rounded-full font-semibold hover:bg-gray-200"
+          >
+            Register / Login
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <section id="home" class="header-bg text-white py-20">
+      <div class="container mx-auto text-center px-6">
+        <h1 class="text-5xl font-bold mb-4">The ChitraHarsha Samāgama</h1>
+        <p class="text-2xl mb-8">
+          A Grand Confluence of Commerce, Creativity, and Careers.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-12">
+      <div class="container mx-auto px-6">
+        <h2 class="section-title">Our Integrated Ecosystem</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center card-hover">
+            <i class="fas fa-store text-4xl text-purple-600 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">E-Commerce Marketplace</h3>
+            <p class="text-gray-600">
+              Buy and sell new goods and timeless antiques with ease.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center card-hover">
+            <i class="fas fa-briefcase text-4xl text-purple-600 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Career Opportunities</h3>
+            <p class="text-gray-600">
+              Register for various job roles and connect with our venture.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center card-hover">
+            <i class="fas fa-shield-alt text-4xl text-purple-600 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Secure Transactions</h3>
+            <p class="text-gray-600">
+              Powered by The ChitraHarsha VPK Pay for UPI & Crypto.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Currency Converter Section -->
+    <section id="converter" class="py-12 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="section-title">Live Currency & Crypto Tracker</h2>
+        <div class="max-w-2xl mx-auto p-8 bg-gray-50 rounded-lg shadow-lg">
+          <div class="flex flex-col md:flex-row gap-4 items-end">
+            <div class="w-full">
+              <label
+                for="from_currency"
+                class="block font-semibold text-gray-700"
+                >From</label
+              >
+              <select
+                id="from_currency"
+                class="w-full mt-1 p-2 border rounded-lg"
+              >
+                <option>INR (Indian Rupee)</option>
+                <option selected>USD (US Dollar)</option>
+                <option>EUR (Euro)</option>
+                <option>BTC (Bitcoin)</option>
+                <option>CHC (ChitraHarsha Coin)</option>
+              </select>
+            </div>
+            <div class="text-2xl font-bold text-purple-600 pb-2">
+              <i class="fas fa-exchange-alt"></i>
+            </div>
+            <div class="w-full">
+              <label for="to_currency" class="block font-semibold text-gray-700"
+                >To</label
+              >
+              <select
+                id="to_currency"
+                class="w-full mt-1 p-2 border rounded-lg"
+              >
+                <option selected>INR (Indian Rupee)</option>
+                <option>USD (US Dollar)</option>
+                <option>EUR (Euro)</option>
+                <option>BTC (Bitcoin)</option>
+                <option>CHC (ChitraHarsha Coin)</option>
+              </select>
+            </div>
+          </div>
+          <div class="mt-6 text-center">
+            <p class="text-lg text-gray-600">Live Conversion Rate</p>
+            <p class="text-3xl font-bold text-purple-800">1 USD = 83.54 INR</p>
+            <p class="text-sm text-gray-500">Last updated: Just now</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI & Backend Integration Info Section -->
+    <section class="py-12">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="section-title">Powered by Future-Ready Technology</h2>
+        <p class="max-w-3xl mx-auto text-gray-600 text-lg">
+          Our platform integrates cutting-edge AI and a robust backend to
+          deliver a seamless experience. NLP-powered chatbots provide instant
+          support, while machine learning algorithms offer personalized
+          recommendations. All user data is encrypted and managed through a
+          blockchain system on secure, government-compliant cloud
+          infrastructure, ensuring your privacy and security are paramount.
+        </p>
+      </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="container mx-auto px-6 text-center">
+        <p>&copy; 2025 The ChitraHarsha Samāgama. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Main Modal -->
+    <div id="mainModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div id="modal-content-area">
+          <!-- Dynamic Content Loads Here -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const modal = document.getElementById("mainModal");
+      const loginBtn = document.getElementById("loginBtn");
+      const closeBtn = document.querySelector(".close-button");
+      const modalContentArea = document.getElementById("modal-content-area");
+
+      // --- TEMPLATES ---
+      const registerTemplate = `
+            <h2 class="text-2xl font-bold text-center mb-6">Create Your Account</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700">Username (Email/Mobile)</label>
+                    <input type="text" class="w-full px-3 py-2 border rounded-lg">
+                </div>
+                <div>
+                    <label class="block text-gray-700">Mobile Number</label>
+                    <input type="text" class="w-full px-3 py-2 border rounded-lg">
+                </div>
+                <div>
+                    <label class="block text-gray-700">Create Password</label>
+                    <input type="password" class="w-full px-3 py-2 border rounded-lg">
+                </div>
+                <div>
+                    <label class="block text-gray-700">Confirm Password</label>
+                    <input type="password" class="w-full px-3 py-2 border rounded-lg">
+                </div>
+                <div class="md:col-span-2">
+                    <label for="jobRole" class="block text-gray-700">Applying for a Job Role? (Optional)</label>
+                    <select id="jobRole" class="w-full mt-1 p-2 border rounded-lg">
+                        <option value="">I'm here to shop/sell items</option>
+                        <optgroup label="HR Department">
+                            <option value="hr_junior">HR (Junior)</option>
+                            <option value="hr_senior">HR (Senior)</option>
+                            <option value="hr_head">HR (Head)</option>
+                        </optgroup>
+                        <optgroup label="Finance Department">
+                            <option value="finance_junior">Finance (Junior)</option>
+                            <option value="finance_senior">Finance (Senior)</option>
+                            <option value="finance_head">Finance (Head)</option>
+                        </optgroup>
+                        <optgroup label="Technology & Data">
+                            <option value="data_analyst">Data Analyst</option>
+                            <option value="data_scientist">Data Scientist</option>
+                        </optgroup>
+                         <optgroup label="Creative & Strategy">
+                            <option value="brainstormer">Brainstormer</option>
+                            <option value="researcher">Researcher</option>
+                            <option value="designer">Interior Designer</option>
+                        </optgroup>
+                        <optgroup label="Management & Leadership">
+                            <option value="ceo">CEO Department</option>
+                            <option value="shareholder">Shareholder Relations</option>
+                        </optgroup>
+                        <optgroup label="Operations & Support">
+                            <option value="transport">Transportation</option>
+                            <option value="security">Security</option>
+                            <option value="cleaning">Cleaning Staff</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+            <div class="text-center mt-6">
+                <button class="btn-primary w-full py-2 rounded-lg text-lg">Register</button>
+            </div>
+            <p class="text-center mt-4">Already have an account? <a href="#" id="showLogin" class="text-purple-700 hover:underline">Login</a></p>
+        `;
+
+      const loginTemplate = `
+            <h2 class="text-2xl font-bold text-center mb-6">Welcome Back</h2>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-semibold mb-2">Username (Email/Mobile)</label>
+                <input type="text" class="w-full px-4 py-2 border rounded-lg">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-semibold mb-2">Password</label>
+                <input type="password" class="w-full px-4 py-2 border rounded-lg">
+            </div>
+            <div class="text-center">
+                <button class="btn-primary w-full py-2 rounded-lg text-lg">Login</button>
+            </div>
+             <p class="text-center mt-4">New here? <a href="#" id="showRegister" class="text-purple-700 hover:underline">Create an Account</a></p>
+        `;
+
+      // --- Event Listeners ---
+      function openModal(content) {
+        modalContentArea.innerHTML = content;
+        modal.style.display = "block";
+      }
+
+      loginBtn.onclick = () => openModal(registerTemplate);
+      closeBtn.onclick = () => (modal.style.display = "none");
+      window.onclick = (event) => {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      document.addEventListener("click", function (e) {
+        if (e.target.id === "showRegister") {
+          e.preventDefault();
+          openModal(registerTemplate);
+        } else if (e.target.id === "showLogin") {
+          e.preventDefault();
+          openModal(loginTemplate);
+        }
+      });
+    </script>
+  </body>
+</html>
